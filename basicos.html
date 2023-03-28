@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Funadamentos JavaScript</h1>
+
+    <ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+    </ul>
+
+    <script>
+
+        var saludo = "Hello World";
+        let uno = "Hola Mundillo...";
+        
+        console.log(saludo);
+        console.log(uno);
+        console.log(window.location);
+
+        
+
+        /*
+        - Hoisting:    
+            El "hoisting" en JavaScript es un comportamiento que ocurre durante la fase de compilación o 
+            "pre-procesamiento" del código JavaScript, donde todas las declaraciones de variables y funciones 
+            son movidas al principio del ámbito en el que se encuentran.
+        */ 
+        
+        console.log("** Llamada antes de la funcion **");
+        foo();
+        
+        function foo() {
+            console.log("Hola! soy foo...");
+        }
+
+        console.log("** Llamada despues de la funcion **");
+
+        foo();
+
+        // Constantes en JavaScript
+        console.log("** Constantes en JS **");
+
+        const PI = 3.14;
+
+        const persona = {
+            nombre: "Hector",
+            edad: 28
+        }
+
+        const colores = ["rojo", "amarillo", "verde"];
+
+        console.log(persona);
+        console.log(colores);
+
+        persona.email = "hector@gmail.com";
+        colores.push("azul");
+        
+        console.log(persona);
+        console.log(colores);
+
+        // Cadenas de texto String
+        console.log("** Cadenas de Texto String **");
+
+        let nombre = "Hector";
+        let apellido = 'Ajumado';
+        let a = new String("Hello world");
+        let lorem = "lorem ipsun, dolor sit ammet concectetur";
+
+        console.log(nombre, apellido, a);
+        console.log(
+            nombre.length,
+            apellido.length,
+            a.length,
+            nombre.toUpperCase(),
+            apellido.toLowerCase(),
+            lorem.includes("ta"),
+            lorem.split(" "),
+            
+        );
+
+        /**
+         * Interpolación
+         * Template String
+        */
+
+        console.log("** Template String. **");
+
+        let name = "Hector";
+        let lastname = "Ajumado";
+
+        let greeting = `Hello! my name is ${name} ${lastname}. What's your name?`;
+        console.log(greeting);
+
+        let ul = `<ul>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+</ul>`;
+
+        console.log(ul);
+
+        let number1 = 3.14;
+        console.log(parseFloat(number1));  
+
+        function sumar(a, b) {
+            let c = a+b;
+            return c;
+        }
+        const resultado = sumar(2, 3);
+        console.log(resultado); // Imprime "undefined"
+
+    </script>
+</body>
+</html>
